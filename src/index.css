@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  body {
+    @apply bg-dark-950 text-white font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(192, 132, 252, 0.1) 0%, transparent 50%);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-morphism {
+    @apply backdrop-blur-sm bg-white/5 border border-white/10;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 bg-clip-text text-transparent;
+  }
+  
+  .gradient-border {
+    @apply relative bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 p-[1px] rounded-lg;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 rounded-lg blur-sm opacity-75;
+    z-index: -1;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25;
+  }
+  
+  .btn-secondary {
+    @apply glass-morphism hover:bg-white/10 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .card {
+    @apply glass-morphism rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10 hover:bg-white/10;
+  }
+  
+  .section {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #a855f7, #c084fc);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #9333ea, #a855f7);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(168, 85, 247, 0.3);
+  color: white;
+}
+
+/* Focus states */
+*:focus {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+} 
