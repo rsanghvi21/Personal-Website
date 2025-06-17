@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+dist
 dist-ssr
 *.local
 
@@ -31,6 +32,7 @@ dist-ssr
 
 # Production builds
 build/
+dist/
 
 # Dependencies
 node_modules/
