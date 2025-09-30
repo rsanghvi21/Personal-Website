@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website built with React.js, featuring a beautiful dark theme with purple accents, smooth animations, and glassmorphism design.
 
-![Portfolio Preview](https://via.placeholder.com/800x400/0a0a0a/a855f7?text=Portfolio+Preview)
+
 
 ## ✨ Features
 
@@ -198,4 +198,3 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ⭐ **If you found this portfolio template helpful, please give it a star!**
 
-📧 **Questions?** Feel free to reach out at your.email@example.com 
